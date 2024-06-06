@@ -1,0 +1,268 @@
+:root {
+    --c_roxo_claro: #D5CDD5;
+    --c_roxo_medio: #8A7DAA;
+    --c_roxo: #69597B;
+    --c_branco: #ffffff;
+}
+
+body::-webkit-scrollbar {
+    width: 12px; 
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--c_roxo); 
+    border-radius: 6px; 
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: var(--c_roxo_medio); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--c_roxo_claro);
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Centraliza todo o conteúdo */
+}
+
+.container {
+    width: 100%;
+    max-width: 1340px;
+    margin: 0 auto; /* Centraliza o container */
+    padding: 0 20px;
+}
+
+#btt_menu {
+    display: none;
+}
+
+label[for="btt_menu"] {
+    display: none;
+    position: absolute;
+    padding: 10px;
+    color: var(--c_roxo); 
+    font-size: 50px;
+    cursor: pointer;
+}
+
+header {
+    background-color: var(--c_roxo_claro);
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    position: relative;
+    background-color: var(--c_roxo);
+    border-radius: 10px;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--c_roxo);
+}
+
+nav ul, ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li, ul li {
+    margin: 5px 20px;
+    text-transform: uppercase;
+}
+
+nav ul li a, ul li a {
+    color: var(--c_roxo_claro);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover, ul li a:hover {
+    color: var(--c_roxo_medio);
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    margin: 20px 0;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-slide img {
+    width: 100%;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--c_roxo);
+    border: none;
+    color: var(--c_branco);
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+    text-decoration: none;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+.catalogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.catalogo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.banner-lingerie {
+    position: relative;
+    width: 100%;
+    margin: 20px 0;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.banner-lingerie img {
+    max-width: 100%;
+    height: auto;
+}
+
+.banner-bodystoking{
+    position: relative;
+    width: 100%;
+    margin: 20px 0;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.banner-bodystoking img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    header {
+        text-align: center;
+    }
+
+    #btt_menu {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    label[for="btt_menu"] {
+        display: block;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    .logo img {
+        width: 100%;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    #btt_menu:checked ~ nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        padding: 15px;
+        margin: auto;
+        width: 80%;
+    }
+
+    label[for="btt_menu"] {
+        font-size: 35px;
+       
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .carousel-button {
+        padding: 3px;
+    }
+}
